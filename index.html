@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Compiler</title>
+</head>
+<body>
+    <h1>Web Compiler</h1>
+    <form action="/compile" method="post">
+        <label for="lang">Select Language:</label>
+        <select name="lang" id="lang">
+            <option value="python">Python</option>
+            <option value="java">Java</option>
+            <option value="html">HTML</option>
+        </select>
+        <br><br>
+        <textarea name="code" rows="10" cols="50"></textarea>
+        <br><br>
+        <input type="submit" value="Compile">
+    </form>
+</body>
+</html>
