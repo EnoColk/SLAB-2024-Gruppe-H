@@ -55,11 +55,18 @@ header .navbar {
   color: #C06B3E;
 }
 
+.hero-section video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Ensure the video is behind the content */
+}
+
 .hero-section {
   height: 100vh;
-  background-image: url(teim.jpg);
-  background-position: center;
-  background-size: cover;
   display: flex;
   align-items: center;
   padding: 0 20px;
@@ -195,7 +202,7 @@ main {
 
 footer {
 
-    background-color: purple;
+    background-color: rgb(36, 25, 36);
     color: #fff;
 }
 
@@ -214,57 +221,65 @@ footer {
         <a class="logo" href="#">TEIM<span>.</span></a>
         <ul class="menu-links">
           <span id="close-menu-btn" class="material-symbols-outlined">close</span>
-          <li><a href="#">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="#">Live Code</a></li>
-          <li><a href="#">Register</a></li>
-          <li><a href="#">Login</a></li>
-          <li><a href="#">About us</a></li>
-          <li><a href="#">Contact us</a></li>
+          <li><a href="resgister.html">Register</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="Aboutus.html">About us</a></li>
         </ul>
         <span id="hamburger-btn" class="material-symbols-outlined">menu</span>
       </nav>
     </header>
-     
+  
     <center>
-    <section class="hero-section">
-      <div class="content">
-        <h2>About us</h2>
-        <p> 
-            We represent students from Westfalia Hochschule in Bocholt, Germany.</p>
-            <p>As a collective of four, we have undertaken the design of this university project with a shared aspiration: 
-           to establish a platform for collaborative programming experiences. Currently, our endeavor is in its alpha phase.
-        </p>
-        <p>
-            Project participants
-
-            Ensar Cölkesen (Frontend)
-            Ideal Dana (Frontend)
-            Taha El Mir (Backend)
-            Mohammed Belamallen(Backend)
-        </p>
-        <button>Our University</button>
-      </div>
-    </section>
-</center>
-
+      <section class="hero-section">
+        <video autoplay loop muted playsinline>
+          <source src="teimvid.mp4" type="video/mp4">
+          <!-- Add additional source elements for other video formats if necessary -->
+        </video>
+        <div class="content">
+          <h2>About us</h2>
+          <p> 
+              We represent students from Westfalia Hochschule in Bocholt, Germany.</p>
+              <p>As a collective of four, we have undertaken the design of this university project with a shared aspiration: 
+             to establish a platform for collaborative programming experiences. Currently, our endeavor is in its alpha phase.
+          </p>
+          <p>
+              Project participants
+      
+              Ensar Cölkesen (Frontend)
+              Ideal Dana (Frontend)
+              Taha El Mir (Backend)
+              Mohammed Belamallen(Backend)
+          </p>
+          <button id="submitBtn">Our University</button> <!-- Added an id to the button -->
+        </div>
+      </section>
+    </center>
+  
     <script>
       const header = document.querySelector("header");
       const hamburgerBtn = document.querySelector("#hamburger-btn");
       const closeMenuBtn = document.querySelector("#close-menu-btn");
-
+  
       // Toggle mobile menu on hamburger button click
       hamburgerBtn.addEventListener("click", () => header.classList.toggle("show-mobile-menu"));
-
+  
       // Close mobile menu on close button click
       closeMenuBtn.addEventListener("click", () => hamburgerBtn.click());
+  
+      // Add event listener to the submit button
+      const submitBtn = document.getElementById("submitBtn");
+      submitBtn.addEventListener("click", () => {
+        // Redirect to the specified URL
+        window.location.href = "https://www.w-hs.de/bocholt/";
+      });
     </script>
-    
   
     <footer>
-        <center>
-            <p>&copy; 2024 Your Website. All rights reserved.</p>
-        </center>
-        </footer>
-
+      <center>
+        <p>&copy; 2024 Your Website. All rights reserved.</p>
+      </center>
+    </footer>
+  
   </body>
-</html>
