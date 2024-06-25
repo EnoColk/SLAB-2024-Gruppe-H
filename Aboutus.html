@@ -77,19 +77,22 @@ header .navbar {
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
-  color: #fff;
+  color: #dbdbdb;
+ 
 }
 
 .hero-section .content h2 {
   font-size: 3rem;
   max-width: 600px;
   line-height: 70px;
+  
 }
 
 .hero-section .content p {
   font-weight: 300;
   max-width: 600px;
   margin-top: 15px;
+  
 }
 
 .hero-section .content button {
@@ -102,11 +105,13 @@ header .navbar {
   cursor: pointer;
   font-weight: 500;
   transition: 0.2s ease;
+  
 }
 
 .hero-section .content button:hover {
   color: #fff;
   background: #C06B3E;
+  
 }
 
 #close-menu-btn {
@@ -173,22 +178,32 @@ header .navbar {
 
   .hero-section .content :is(h2, p) {
     max-width: 100%;
+    
   }
 
   .hero-section .content h2 {
     font-size: 2.3rem;
     line-height: 60px;
+    
   }
   
   .hero-section .content button {
     padding: 9px 18px;
+    
   }
+}
+
+main {
+
+    text-align: center;
+    padding-left: 10px;
+    background-color: rgba(255, 0, 0, 0.5);
 }
 
 footer {
 
-background-color: purple;
-color: #fff;
+    background-color: rgb(36, 25, 36);
+    color: #fff;
 }
 
 </style> 
@@ -214,53 +229,56 @@ color: #fff;
         <span id="hamburger-btn" class="material-symbols-outlined">menu</span>
       </nav>
     </header>
-
-    <section class="hero-section">
-      <video autoplay loop muted playsinline>
-        <source src="teimvid.mp4" type="video/mp4">
-      </video>
-      <div class="content">
-        <h2>Start Live Coding Today</h2>
-        <p>
-            Start Coding With Your Friends Today From Anywhere Around The World
-        </p>
-        <button>Start Now</button>
-      </div>
-    </section>
-
+  
+    <center>
+      <section class="hero-section">
+        <video autoplay loop muted playsinline>
+          <source src="teimvid.mp4" type="video/mp4">
+          <!-- Add additional source elements for other video formats if necessary -->
+        </video>
+        <div class="content">
+          <h2>About us</h2>
+          <p> 
+              We represent students from Westfalia Hochschule in Bocholt, Germany.</p>
+              <p>As a collective of four, we have undertaken the design of this university project with a shared aspiration: 
+             to establish a platform for collaborative programming experiences. Currently, our endeavor is in its alpha phase.
+          </p>
+          <p>
+              Project participants
+      
+              Ensar Cölkesen (Frontend)
+              Ideal Dana (Frontend)
+              Taha El Mir (Backend)
+              Mohammed Belamallen(Backend)
+          </p>
+          <button id="submitBtn">Our University</button> <!-- Added an id to the button -->
+        </div>
+      </section>
+    </center>
+  
     <script>
       const header = document.querySelector("header");
       const hamburgerBtn = document.querySelector("#hamburger-btn");
       const closeMenuBtn = document.querySelector("#close-menu-btn");
-
+  
       // Toggle mobile menu on hamburger button click
       hamburgerBtn.addEventListener("click", () => header.classList.toggle("show-mobile-menu"));
-
+  
       // Close mobile menu on close button click
       closeMenuBtn.addEventListener("click", () => hamburgerBtn.click());
+  
+      // Add event listener to the submit button
+      const submitBtn = document.getElementById("submitBtn");
+      submitBtn.addEventListener("click", () => {
+        // Redirect to the specified URL
+        window.location.href = "https://www.w-hs.de/bocholt/";
+      });
     </script>
-
-<footer>
-    <center>
+  
+    <footer>
+      <center>
         <p>&copy; 2024 Your Website. All rights reserved.</p>
-    </center>
+      </center>
     </footer>
-    
+  
   </body>
-
-
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
